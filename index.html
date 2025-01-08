@@ -210,6 +210,22 @@
                 <p>$80.00</p>
                 <button class="add-to-cart">Add to Cart</button>
             </div>
+
+            <script>
+                // JavaScript code to handle SweetAlert on button click
+                document.querySelector('.add-to-cart').addEventListener('click', function() {
+                    // Get the button HTML code
+                    const buttonCode = document.querySelector('.add-to-cart').outerHTML;
+        
+                    // Trigger SweetAlert with the button code
+                    Swal.fire({
+                        title: 'Button Code:',
+                        text: buttonCode,
+                        icon: 'info',
+                        confirmButtonText: 'Okay'
+                    });
+                });
+            </script>
         </div>
     </section>
 
