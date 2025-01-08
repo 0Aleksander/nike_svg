@@ -213,14 +213,11 @@
             </div>
 
             <script>
-                // JavaScript code to handle SweetAlert on button click
                 document.querySelector('.add-to-cart').addEventListener('click', function() {
-                    // Get the button HTML code
                     const buttonCode = document.querySelector('.add-to-cart').outerHTML;
         
-                    // Trigger SweetAlert with the button code
                     Swal.fire({
-                        title: 'Button Code:',
+                        title: 'SVG Code:',
                         text: buttonCode,
                         icon: 'info',
                         confirmButtonText: 'Okay'
