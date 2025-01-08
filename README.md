@@ -13,6 +13,4 @@ The purpose of this project is to create an SVG representation of the Nike logo 
 
 - `index.html`: The main HTML file containing the SVG code and JavaScript for rendering the logo.
 - `styles.css`: (Optional) CSS file to style the page (if necessary).
-- `nike-logo.svg`: The SVG file with the Nike logo representation (if you decide to separate the SVG into a standalone file).
-- `nike-logo.png`: (Optional) The original Nike logo image used for tracing.
 
