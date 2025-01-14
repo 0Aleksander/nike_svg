@@ -183,14 +183,60 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             158.00,28.50 163.75,16.25 163.75,16.25
           " />
   </svg></div></h1>
-    <h1>just do it.</h1>
+    <h1>JUST DO IT.</h1>
     <img src="nike_logo/john-wall-nike-POSTER.jpg" alt="boy" class="w3-image" width="992" height="1108">
   </header>
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey" ><label><img src = "nike_logo/nike-swoosh-logo-300x300.png"></label></h2>
+    <h2 class="w3-text-light-grey" ></h2>
+
+    <div id="canvas-container"></div>
+
+    <!-- Your script -->
+    <script>
+      // Create a canvas element
+      const canvas = document.createElement("canvas");
+      canvas.width = 700;
+      canvas.height = 300;
+
+      // Append canvas to the div with id "canvas-container"
+      const container = document.getElementById("canvas-container");
+      container.appendChild(canvas);
+
+      // Get the drawing context
+      const ctx = canvas.getContext("2d");
+
+      // Calculate scaling factor to fit within 300x300
+      const scaleX = 300 / 700; // Scale to fit width
+      const scaleY = 300 / 300; // Scale to fit height
+      const scale = Math.min(scaleX, scaleY); // Maintain aspect ratio
+
+      // Adjust vertical translation to move the image up slightly
+      const offsetX = (300 - 700 * scale) / 2; // Center horizontally
+      const offsetY = (300 - 300 * scale) / 2 - 20; // Move up by 20 pixels
+
+      // Apply scaling and translation
+      ctx.translate(offsetX / scale, offsetY / scale);
+      ctx.scale(scale, scale);
+
+      // Set styles and draw Bézier curves
+      ctx.fillStyle = "white";
+      ctx.beginPath();
+      ctx.moveTo(110, 44);
+      ctx.bezierCurveTo(5, 270, 220, 175, 630, 50);
+      ctx.bezierCurveTo(450, 135, -216, 462, 104, 50);
+      ctx.closePath();
+
+      // Set stroke and fill
+      ctx.lineWidth = 1 / scale; // Adjust line width for scaling
+      ctx.strokeStyle = "white";
+      ctx.stroke();
+      ctx.fill();
+  </script>
+
     <hr style="width:200px" class="w3-opacity">
+    
     <p>NIKE, Inc. is a team comprised of the Nike, Jordan and Converse brands driven by a shared purpose to leave an enduring impact.
     </p>
     <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
@@ -227,7 +273,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
 
     <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download"></i> Download Resume
+      <i class="fa fa-download"></i> Download Report
     </button>
     
     <!-- Grid for pricing tables -->
@@ -244,7 +290,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <span class="w3-opacity">can you find it?</span>
           </li>
           <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">
+              <a href="https://www.w3schools.com/graphics/svg_intro.asp" target="_blank">Learn more</a></button>
           </li>
         </ul>
       </div>
@@ -257,10 +304,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           <li class="w3-padding-16">Integral to vector graphics, animation, and computer-aided design (CAD).</li>
           <li class="w3-padding-16">Independent of resolution, making them ideal for vector-based applications.</li>
           <li class="w3-padding-16">
-            <span class="w3-opacity">per month</span>
+            <span class="w3-opacity">can you spot it?</span>
           </li>
           <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+            <button class="w3-button w3-white w3-padding-large w3-hover-black"><a href="https://www.w3schools.com/jsref/canvas_beziercurveto.asp" target="_blank">Learn more</a></button>
           </li>
         </ul>
       </div>
@@ -301,7 +348,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <hr style="width:200px" class="w3-opacity">
 
     <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Nova Gorica</p>
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Cankarjeva ul. 10, 5000 Nova Gorica</p>
       <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: 041 321 123</p>
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: alek.info@mail.com</p>
     </div><br>
