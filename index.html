@@ -24,7 +24,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
-  <img src="nike_logo/belaslika-removebg-preview.png" style="width:100%">
+  <img src="nike_logo/belaslika-removebg-preview.png" style="width:90%">
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
@@ -201,34 +201,34 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </p>
     <div id="canvas-container"></div>
 
-    <!-- Your script -->
+    
     <script>
-      // Create a canvas element
+      // ustvari canvas
       const canvas = document.createElement("canvas");
       canvas.width = 700;
       canvas.height = 300;
 
-      // Append canvas to the div with id "canvas-container"
+      // dodaj canvas v div
       const container = document.getElementById("canvas-container");
       container.appendChild(canvas);
 
-      // Get the drawing context
+      
       const ctx = canvas.getContext("2d");
 
-      // Calculate scaling factor to fit within 300x300
-      const scaleX = 300 / 700; // Scale to fit width
-      const scaleY = 300 / 300; // Scale to fit height
-      const scale = Math.min(scaleX, scaleY); // Maintain aspect ratio
+      //scale
+      const scaleX = 300 / 700; 
+      const scaleY = 300 / 300; 
+      const scale = Math.min(scaleX, scaleY); // obdrži aspect ratio
 
-      // Adjust vertical translation to move the image up slightly
-      const offsetX = (300 - 700 * scale) / 2; // Center horizontally
-      const offsetY = (300 - 300 * scale) / 2 - 20; // Move up by 20 pixels
+      
+      const offsetX = (300 - 700 * scale) / 2; // centriraj
+      const offsetY = (300 - 300 * scale) / 2 - 20; // gor za 20 px
 
-      // Apply scaling and translation
+      
       ctx.translate(offsetX / scale, offsetY / scale);
       ctx.scale(scale, scale);
 
-      // Set styles and draw Bézier curves
+      
       ctx.fillStyle = "white";
       ctx.beginPath();
       ctx.moveTo(110, 44);
@@ -236,8 +236,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       ctx.bezierCurveTo(450, 135, -216, 462, 104, 50);
       ctx.closePath();
 
-      // Set stroke and fill
-      ctx.lineWidth = 1 / scale; // Adjust line width for scaling
+     
+      ctx.lineWidth = 1 / scale;
       ctx.strokeStyle = "white";
       ctx.stroke();
       ctx.fill();
